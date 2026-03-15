@@ -3,7 +3,7 @@
 String vigenereCipher(String txt, String key, bool encode) {
     key.toLowerCase();
     txt.toLowerCase();
-    String alphabet = "abcdefghijklmnopqrstuvwxyz";
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     String numbers = "0123456789";
     String txtCode = "";
     int keyidx = 0;

@@ -28,13 +28,13 @@ String vigenereCipher(String txt, String key, bool encode) {
             if (!isDigitcheck){
                 int idx = alphabet.indexOf(txt.substring(i, i+1));
                 idx -= alphabet.indexOf(key.substring(keyidx % key.length(), keyidx % key.length() + 1));
-                if (idx < 0) { idx = alphabet.length() + idx; }
+                if (idx < 0) idx = alphabet.length() + idx;
                 txtCode += alphabet.substring(idx % alphabet.length(), idx % alphabet.length() + 1);
                 keyidx++;
             } else {
                 int idx = numbers.indexOf(txt.substring(i, i+1));
                 idx -= numbers.indexOf(key.substring(keyidx % key.length(), keyidx % key.length() + 1));
-                if (idx < 0) { idx numbers.length() + idx; }
+                if (idx < 0) idx = numbers.length() + idx;
                 txtCode += alphabet.substring(idx % numbers.length(), idx % alphabet.length() + 1);
                 keyidx++;
             }

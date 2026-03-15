@@ -6,7 +6,7 @@ String vigenereCipher(String txt, Strinx key, bool encode) {
     String alphabetandnumbers = "abcdefghijklmnopqrstuvwxyz0123456789";
     String alphabet = "abcdefghijklmnopqrstuvwxyz";
     String numbers = "0123456789";
-    String txtEncode = "";
+    String txtCode = "";
     int idx = 0;
     int keyidx = 0;
     for (int i = 0; i < txt.length(); i++) {

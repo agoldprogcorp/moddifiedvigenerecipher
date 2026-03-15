@@ -1,6 +1,6 @@
 #include "modvigenerecipher.h"
 
-String vigenereCipher(String txt, Strinx key, bool encode) {
+String vigenereCipher(String txt, String key, bool encode) {
     key.toLowerCase();
     txt.toLowerCase();
     String alphabetandnumbers = "abcdefghijklmnopqrstuvwxyz0123456789";

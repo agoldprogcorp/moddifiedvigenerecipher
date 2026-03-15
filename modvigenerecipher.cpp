@@ -11,10 +11,10 @@ String vigenereCipher(String txt, String key, bool encode) {
     int keyidx = 0;
     for (int i = 0; i < txt.length(); i++) {
         int idx = alphabetandnumbers.indexOf(txt.substring(i, i+1));
-        String ch = txt.substring(i, i+1);
-        bool isDigitcheck = isDigit(ch.toInt());
+        char ch = txt.substring(i, i+1);
+        bool isDigit = isdigit(ch);
         if (encode){
-            if (!isDigitcheck){
+            if (isDigit == false){
                 int idx = alphabet.indexOf(txt.substring(i, i+1));
                 idx += alphabet.indexOf(key.substring(keyidx % key.length(), keyidx % key.length() + 1));
                 txtCode += alphabet.substring(idx % alphabet.length(), idx % alphabet.length() + 1);
@@ -26,7 +26,7 @@ String vigenereCipher(String txt, String key, bool encode) {
                 keyidx++;
             }
         } else {
-            if (!isDigitcheck){
+            if (isDigit == false){
                 int idx = alphabet.indexOf(txt.substring(i, i+1));
                 idx -= alphabet.indexOf(key.substring(keyidx % key.length(), keyidx % key.length() + 1));
                 if (idx < 0) idx = alphabet.length() + idx;

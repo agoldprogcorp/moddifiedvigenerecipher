@@ -22,7 +22,7 @@ String vigenereCipher(String txt, String key, bool encode) {
             } else {
                 int idx = numbers.indexOf(txt.substring(i, i+1));
                 idx += numbers.indexOf(key.substring(keyidx % key.length(), keyidx % key.length() + 1));
-                txtCode += alphabet.substring(idx % numbers.length(), idx % alphabet.length() + 1);
+                txtCode += numbers.substring(idx % numbers.length(), idx % numbers.length() + 1);
                 keyidx++;
             }
         } else {
@@ -36,7 +36,7 @@ String vigenereCipher(String txt, String key, bool encode) {
                 int idx = numbers.indexOf(txt.substring(i, i+1));
                 idx -= numbers.indexOf(key.substring(keyidx % key.length(), keyidx % key.length() + 1));
                 if (idx < 0) idx = numbers.length() + idx;
-                txtCode += alphabet.substring(idx % numbers.length(), idx % alphabet.length() + 1);
+                txtCode += numbers.substring(idx % numbers.length(), idx % numbers.length() + 1);
                 keyidx++;
             }
         }

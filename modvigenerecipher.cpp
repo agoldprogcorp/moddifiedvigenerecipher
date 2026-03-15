@@ -11,8 +11,8 @@ String vigenereCipher(String txt, String key, bool encode) {
     int keyidx = 0;
     for (int i = 0; i < txt.length(); i++) {
         int idx = alphabetandnumbers.indexOf(txt.substring(i, i+1));
-        char ch = txt.substring(i, i+1);
-        bool isDigitcheck = isDigit(ch);
+        String ch = txt.substring(i, i+1);
+        bool isDigitcheck = isDigit(ch.toInt());
         if (encode){
             if (!isDigitcheck){
                 int idx = alphabet.indexOf(txt.substring(i, i+1));
